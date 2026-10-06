@@ -1,0 +1,26 @@
+.header { position: absolute; inset: var(--space-6) 0 auto; z-index: 10; color: var(--color-white); }
+.header__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
+.header__logo { font: 700 var(--fs-logo)/1 var(--font-display); text-transform: lowercase; }
+.header__nav { display: none; }
+.header__list { display: flex; gap: var(--space-10); font: 500 var(--fs-md) var(--font-ui); text-transform: uppercase; }
+.header__list a { display: inline-block; padding-block: var(--space-2); }
+.header__list a:hover { text-decoration: underline; text-underline-offset: var(--space-1); }
+.header__list a[aria-label], .header__login { font-weight: 600; }
+.header__actions { display: flex; align-items: center; gap: var(--space-3); }
+.header__search { display: grid; place-items: center; width: var(--size-touch); height: var(--size-touch); border: 0; border-radius: var(--radius-round); background: var(--color-white); color: var(--color-espresso); transition: transform var(--transition); }
+.header__search:hover { transform: translateY(-2px); }
+.header__search svg { width: var(--size-icon); height: var(--size-icon); }
+.header__menu { position: relative; }
+.header__menu summary { list-style: none; display: grid; place-items: center; width: var(--size-touch); height: var(--size-touch); cursor: pointer; }
+.header__menu summary::-webkit-details-marker { display: none; }
+.header__burger, .header__burger::before, .header__burger::after { display: block; width: var(--size-icon); height: var(--outline); background: var(--color-white); content: ""; position: relative; }
+.header__burger::before { position: absolute; top: calc(-1 * var(--space-2)); }
+.header__burger::after { position: absolute; top: var(--space-2); }
+.header__panel { position: absolute; right: 0; top: 100%; min-width: 12rem; padding: var(--space-4); background: var(--color-espresso); border-radius: var(--radius-card); }
+.header__panel a { display: block; padding: var(--space-3) var(--space-2); min-height: var(--size-touch); text-transform: uppercase; font: 500 var(--fs-base) var(--font-ui); }
+@media (min-width: 1024px) {
+  .header { top: 55px; }
+  .header__nav { display: block; }
+  .header__menu { display: none; }
+  .header__search { width: var(--size-search); height: var(--size-search); }
+}

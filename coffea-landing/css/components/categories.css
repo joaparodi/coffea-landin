@@ -1,0 +1,7 @@
+.categories { padding-block: var(--space-10); background: var(--color-sand); }
+.categories__list { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); max-width: 845px; margin-inline: auto; }
+.categories__item { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); min-height: var(--size-touch); font: 500 var(--fs-md) var(--font-ui); color: var(--color-muted); transition: color var(--transition); }
+.categories__item svg { width: var(--size-cat-icon); height: var(--size-cat-icon); }
+.categories__item:hover { color: var(--color-espresso); }
+@media (min-width: 768px) { .categories__list { display: flex; justify-content: space-between; } }
+@media (min-width: 1024px) { .categories { display: grid; align-items: center; min-height: 220px; } }
