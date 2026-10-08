@@ -7,3 +7,5 @@
 .promo__img--left { left: 0; } .promo__img--right { right: 0; }
 @media (min-width: 768px) { .promo__img--left { display: block; max-width: 25%; } }
 @media (min-width: 1024px) { .promo { min-height: 335px; } .promo__img { display: block; max-width: 30%; } }
+.promo__inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-6); text-align: center; }
+.promo__title { margin-inline: auto; }
