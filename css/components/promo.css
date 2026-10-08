@@ -1,9 +1,10 @@
-.promo { position: relative; display: grid; place-items: center; gap: var(--space-6); padding-block: var(--space-14); background: var(--color-sand); text-align: center; overflow: hidden; }
-.promo__title { max-width: 372px; font: 600 var(--fs-cta)/1.25 var(--font-display); color: var(--color-black); }
-.promo__btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-3); min-height: var(--size-touch); margin-top: var(--space-6); padding: var(--space-4) var(--space-10); border-radius: var(--radius-pill); background: var(--color-espresso); color: var(--color-bg); font: 500 var(--fs-base) var(--font-body); transition: transform var(--transition); }
+.promo { position: relative; padding-block: var(--space-14); background: var(--color-sand); overflow: hidden; }
+.promo__inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-6); text-align: center; }
+.promo__title { max-width: 372px; margin-inline: auto; font: 600 var(--fs-cta)/1.25 var(--font-display); color: var(--color-black); }
+.promo__btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-3); min-height: var(--size-touch); padding: var(--space-4) var(--space-10); border-radius: var(--radius-pill); background: var(--color-espresso); color: var(--color-bg); font: 500 var(--fs-base) var(--font-body); transition: transform var(--transition); }
 .promo__btn:hover { transform: translateY(-2px); }
 .promo__btn svg { width: var(--space-4); height: var(--space-4); }
 .promo__img { display: none; position: absolute; top: 0; height: 100%; width: auto; max-width: 35%; object-fit: cover; }
-.promo__img--left { left: 0; } .promo__img--right { right: 0; }
+.promo__img--left { left: 0; object-position: left center; } .promo__img--right { right: 0; object-position: right center; }
 @media (min-width: 768px) { .promo__img--left { display: block; max-width: 25%; } }
-@media (min-width: 1024px) { .promo { min-height: 335px; } .promo__img { display: block; max-width: 30%; } }
+@media (min-width: 1024px) { .promo { display: grid; align-items: center; min-height: 335px; } .promo__img { display: block; max-width: 30%; } }
